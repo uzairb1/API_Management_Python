@@ -1,0 +1,1 @@
+firstname, lastname, phone, address.street, address.streetName, address.buildingNumber, address.city, address.zipcode, address.latitude, address.longitude

@@ -1,0 +1,52 @@
+2024-10-05 18:45:02,743 - INFO - Starting test: test_data_quality
+2024-10-05 18:45:04,628 - INFO - Results for Data Quality Check - Missing Values:
+2024-10-05 18:45:04,628 - INFO - No issues found.
+2024-10-05 18:45:04,628 - INFO - Results for Data Quality Check - Data Types:
+2024-10-05 18:45:04,628 - INFO - No issues found.
+2024-10-05 18:45:04,628 - INFO - Results for Data Quality Check - Invalid Emails:
+2024-10-05 18:45:04,628 - INFO - All Emails in correct format
+2024-10-05 18:45:04,628 - INFO - Results for Data Quality Check - Duplicate Records:
+2024-10-05 18:45:04,628 - INFO - No issues found.
+2024-10-05 18:45:04,628 - INFO - Results for Data Quality Check - Check Birthday Format:
+2024-10-05 18:45:04,628 - INFO - No issues found.
+2024-10-05 18:45:04,628 - INFO - Starting test: test_masked_data_quality
+2024-10-05 18:45:04,643 - INFO - Results for Masked Data Quality Check - Masked Columns Check:
+2024-10-05 18:45:04,643 - INFO - No issues found.
+2024-10-05 18:45:04,643 - INFO - Results for Masked Data Quality Check - Invalid Birthday Entries:
+2024-10-05 18:45:04,643 - INFO - No issues found.
+2024-10-05 18:45:04,643 - INFO - Results for Masked Data Quality Check - Invalid Email Domains:
+2024-10-05 18:45:04,643 - INFO - No issues found.
+2024-10-05 18:45:04,643 - INFO - Starting test: test_generate_report
+2024-10-05 18:45:04,643 - INFO - Executing query: over_60_gmail.sql
+2024-10-05 18:45:04,643 - INFO - Query over_60_gmail.sql returned results.
+2024-10-05 18:45:04,643 - INFO - Executing query: percentage_germany_email.sql
+2024-10-05 18:45:04,643 - INFO - Query percentage_germany_email.sql returned results.
+2024-10-05 18:45:04,643 - INFO - Executing query: top_three_gmail.sql
+2024-10-05 18:45:04,643 - INFO - Query top_three_gmail.sql returned results.
+2024-10-05 18:45:04,643 - INFO - Report generation test passed with 3 results returned.
+2024-10-05 18:46:08,230 - INFO - Starting test: test_data_quality
+2024-10-05 18:46:09,600 - INFO - Results for Data Quality Check - Missing Values:
+2024-10-05 18:46:09,600 - INFO - No issues found.
+2024-10-05 18:46:09,600 - INFO - Results for Data Quality Check - Data Types:
+2024-10-05 18:46:09,600 - INFO - No issues found.
+2024-10-05 18:46:09,600 - INFO - Results for Data Quality Check - Invalid Emails:
+2024-10-05 18:46:09,600 - INFO - All Emails in correct format
+2024-10-05 18:46:09,600 - INFO - Results for Data Quality Check - Duplicate Records:
+2024-10-05 18:46:09,600 - INFO - No issues found.
+2024-10-05 18:46:09,600 - INFO - Results for Data Quality Check - Check Birthday Format:
+2024-10-05 18:46:09,600 - INFO - No issues found.
+2024-10-05 18:46:09,600 - INFO - Starting test: test_masked_data_quality
+2024-10-05 18:46:09,617 - INFO - Results for Masked Data Quality Check - Masked Columns Check:
+2024-10-05 18:46:09,617 - INFO - No issues found.
+2024-10-05 18:46:09,617 - INFO - Results for Masked Data Quality Check - Invalid Birthday Entries:
+2024-10-05 18:46:09,617 - INFO - No issues found.
+2024-10-05 18:46:09,617 - INFO - Results for Masked Data Quality Check - Invalid Email Domains:
+2024-10-05 18:46:09,617 - INFO - No issues found.
+2024-10-05 18:46:09,617 - INFO - Starting test: test_generate_report
+2024-10-05 18:46:09,617 - INFO - Executing query: over_60_gmail.sql
+2024-10-05 18:46:09,617 - INFO - Query over_60_gmail.sql returned results.
+2024-10-05 18:46:09,617 - INFO - Executing query: percentage_germany_email.sql
+2024-10-05 18:46:09,617 - INFO - Query percentage_germany_email.sql returned results.
+2024-10-05 18:46:09,617 - INFO - Executing query: top_three_gmail.sql
+2024-10-05 18:46:09,617 - INFO - Query top_three_gmail.sql returned results.
+2024-10-05 18:46:09,617 - INFO - Report generation test passed with 3 results returned.
