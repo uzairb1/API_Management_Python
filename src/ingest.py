@@ -18,7 +18,7 @@ def read_faker_api(quantity, max_retries=5):
     for attempt in range(max_retries):
         try:
             response = requests.get(url)
-            if response.status_code == 200 and response.json()['status'] == "OK" and response.json()['total'] == 1000:
+            if response.status_code == 200 and response.json()['status'] == "OK" and response.json()['total'] == quantity:
                 return pd.json_normalize(response.json()['data'])
             else:
                 print(f"Error in fetching data from Faker API: Status code {response.status_code}, Status: {response.json().get('status')}, Count:{response.json()['total']}")
