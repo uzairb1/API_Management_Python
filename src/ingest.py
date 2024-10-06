@@ -18,10 +18,10 @@ def read_faker_api(quantity, max_retries=5):
     for attempt in range(max_retries):
         try:
             response = requests.get(url)
-            if response.status_code == 200 and response.json()['status'] == "OK":
+            if response.status_code == 200 and response.json()['status'] == "OK" and response.json()['total'] == 1000:
                 return pd.json_normalize(response.json()['data'])
             else:
-                print(f"Error in fetching data from Faker API: Status code {response.status_code}, Status: {response.json().get('status')}")
+                print(f"Error in fetching data from Faker API: Status code {response.status_code}, Status: {response.json().get('status')}, Count:{response.json()['total']}")
         except requests.exceptions.RequestException as e:
             print(f"Attempt {attempt + 1} failed with error: {e} \n check api url")
         
@@ -29,5 +29,3 @@ def read_faker_api(quantity, max_retries=5):
         time.sleep(2 ** attempt)
     
     raise Exception(f"Failed to fetch data from Faker API after {max_retries} attempts.")
-
-

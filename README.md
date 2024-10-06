@@ -60,7 +60,7 @@ Run the Docker container:
 
 bash
 Copy code
-docker run your_image_name
+docker run -it -d your_container_name your_image_name
 Running Tests
 To execute the tests and verify that the data quality checks are functioning as expected, run:
 
@@ -68,6 +68,11 @@ bash
 Copy code
 docker run your_image_name pytest
 This will execute the tests defined in the tests folder, logging the results in test_log.log.
+
+To debug data in sqlite3 database create a new file within the src/queries folder with a .sql extension and write your query then copy the file into the container using
+docker cp src/queries/your_file.sql your_container:/app/src/queries
+then run the container again using
+docker run -it -d your_container_name /bin/bash
 
 Logging
 The project logs key information and errors to test_log.log. You can check this file to see the results of the test runs, including which tests passed or failed.
