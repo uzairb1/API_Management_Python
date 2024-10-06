@@ -83,25 +83,3 @@ To ensure continuous monitoring and maintenance of the system:
 Monitor the test_log.log for errors or issues during the testing phase.
 Regularly review the results of the data quality checks.
 Adjust and enhance the quality checks and tests as needed based on the evolving data requirements.
-Contributing
-Contributions are welcome! Please feel free to submit a pull request or raise an issue.
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-markdown
-Copy code
-
-### Explanation:
-- **Project Overview**: Gives a brief introduction to what the project is about.
-- **Features**: Lists the key features of the project.
-- **Project Structure**: Describes the folder structure to help new contributors understand how to navigate the codebase.
-- **Requirements**: Lists necessary software and dependencies.
-- **Installation Instructions**: Guides users on how to set up and run the project.
-- **Running Tests**: Instructions on how to execute the test cases.
-- **Logging**: Explains how logging is handled in the project.
-- **Monitoring and Maintenance**: Recommendations for ongoing monitoring of the system's performance.
-- **Contributing**: Encourages community involvement.
-- **License**: Mentions the licensing of the project.
-
-Feel free to customize any sections to better fit your project's specifics or your preference
