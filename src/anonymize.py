@@ -106,5 +106,6 @@ if __name__ == "__main__":
 
     anonymizer = AnonymizeData(db_name, table_name, file_path)
     #function should be run 30 times for prod deployment
-    for i in range(30):
-        anonymizer.run(quantity)
+    #for i in range(30):
+     #   anonymizer.run(quantity)
+    anonymizer.run(quantity)

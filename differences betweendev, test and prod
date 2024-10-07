@@ -1,0 +1,22 @@
+Development:
+
+Database: Often uses an SQLite database, or in-memory DB for ease of setup. Could also use a local instance of a database like PostgreSQL.
+API Keys: Uses fake or sandbox API keys for external services.
+Debug Mode: Enabled for easier troubleshooting (e.g., Flask/Django DEBUG=True).
+Logging Level: Typically set to DEBUG to capture detailed logs.
+External Services: Uses mock or sandboxed services (e.g., a Faker API test environment).
+Testing:
+
+Database: Can use a testing database (PostgreSQL/MySQL), often spun up using Docker or in-memory databases like SQLite.
+API Keys: Similar to development, using fake keys or stubbed API endpoints.
+Debug Mode: May still be enabled to capture detailed test failures, but typically more streamlined than dev.
+Logging Level: Usually set to INFO or DEBUG, depending on the need for detailed test logs.
+Testing Frameworks: Integrated with automated test frameworks (e.g., pytest).
+External Services: Mocked services are often used, or integration tests with sandboxed APIs.
+Production:
+
+Database: Connects to a production-ready database (e.g., PostgreSQL, MySQL), often hosted in the cloud.
+API Keys: Uses real API keys and secrets for external services.
+Debug Mode: Always disabled (DEBUG=False) to prevent exposure of sensitive information.
+Logging Level: Typically set to ERROR or WARNING, capturing only important issues.
+External Services: Full access to live external services
