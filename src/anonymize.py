@@ -54,7 +54,7 @@ class AnonymizeData:
                 print(f"Connected to database: {self.db_name}")
 
                 # Store the DataFrame in the specified table
-                self.df.to_sql(self.table_name, conn, if_exists='replace', index=False)
+                self.df.to_sql(self.table_name, conn, if_exists='append', index=False)
                 print(f"DataFrame stored in table '{self.table_name}' successfully.")
 
         except sqlite3.Error as e:
@@ -105,4 +105,6 @@ if __name__ == "__main__":
     quantity = 1000
 
     anonymizer = AnonymizeData(db_name, table_name, file_path)
-    anonymizer.run(quantity)
+    #function should be run 30 times for prod deployment
+    for i in range(30):
+        anonymizer.run(quantity)
