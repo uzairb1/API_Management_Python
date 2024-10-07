@@ -1,0 +1,26 @@
+Production Ready Pipelines and Code Changes
+The dev version is done, for the first objective, 30K data was necessary, but I only did it for 1k people.
+would be increased for the prod version
+1. Depending on the case if more data sources would be incorporated or not, if yes, then ingest.py 
+	would be expanded and then similarly with anonymize.py 
+2. For expanding the reports, a new file would be added to the queries folder and then report.py 
+	would be run
+3. In the store_to_sqlite funciton in anonymize, if_exists would be changed from replace to append 
+	in the production pipeline
+4. For fault tolerance, pytests should be run before any deployment, therefore the & sign is used 
+	at the end of each RUN statement in the Dockerfile
+5. More tests need to be added for memory checks and network latencies, but that depends on the 
+	prod environment
+6. An API Key must be used for calling the API, as it exposes PII Data, but the raw data is not stored
+	at any point, but if a malicious actor gains access to the ingest code, it may be a security leak
+	therefore an API Key is necessary, also if possible, SQLITE3 should be password protected
+7. The sqlite table faker_data should be emptied if exists, so that no data is in there.
+8. THe data/ folder should be mounted to a volume within a docker container to persist data storage	
+9. For scalability consider migrating to a more production-ready database like PostgreSQL or MySQL
+10. Automated Tests with Pytest: Use tools like GitHub Actions, GitLab CI, 
+	or Jenkins to automatically run tests (located in the tests/ folder) 
+	whenever new code is pushed. For example, with GitHub Actions
+11. Horizontal Scaling and Load Balancing, Kubernetes for HS, or AWS Load Balancer for handling 
+	user requests
+12. Periodic Backups of the prod data
+13. Docker’s --restart policy or a service like Kubernetes to manage restarts and updates.
