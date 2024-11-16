@@ -25,6 +25,7 @@ class AnonymizeData:
         """Anonymizes the 'birthday' column by converting it to age groups."""
         current_year = datetime.now().year
         self.df['birth_year'] = self.df['birthday'].str[:4].astype(int)
+        
         age_group_start = ((current_year - self.df['birth_year']) // 10 * 10).astype(str)
         age_group_end = (age_group_start.astype(int) + 10).astype(str)
         self.df['birthday'] = age_group_start + '-' + age_group_end
